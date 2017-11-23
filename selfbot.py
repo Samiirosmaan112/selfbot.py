@@ -68,8 +68,9 @@ class Selfbot(commands.Bot):
         self.add_command(self.load)
         self.add_command(self.reloadcog)
         self.load_community_extensions()
-
-    def load_extensions(self, cogs=None, path='cogs.'):
+        self.add_command(self.owner)
+    
+def load_extensions(self, cogs=None, path='cogs.'):
         '''Loads the default set of extensions or a seperate one if given'''
         for extension in cogs or self._extensions:
             try:
